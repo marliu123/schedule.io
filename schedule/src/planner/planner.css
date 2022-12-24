@@ -1,0 +1,77 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    
+}
+
+.wrapper{
+    border-radius: 10px;
+    width: 550px;
+    background-color: white;
+}
+
+.wrapper header{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+header .current-date{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+header .icons span{
+    height: 38px;
+    width: 38px;
+    font-size: 2.2rem;
+    margin: 0 3px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+}
+
+header .icons span:last-child{
+    margin-right: -10px;
+}
+
+.calendar{
+    padding: 14px;
+}
+
+.calendar ul{
+    font-size: 25px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.calendar .days{
+    margin-bottom: 20px;
+}
+
+.calendar .weeks li{
+    font-weight: 100;
+}
+
+.calendar .days li{
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.calendar ul li{
+    width: calc(100% / 7);
+}
