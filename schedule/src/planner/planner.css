@@ -35,7 +35,7 @@ header .current-date{
 header .icons span{
     height: 38px;
     width: 38px;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     margin: 0 3px;
     cursor: pointer;
     text-align: center;
@@ -64,14 +64,20 @@ header .icons span:last-child{
 }
 
 .calendar .weeks li{
-    font-weight: 100;
+    font-weight: 500;
 }
 
 .calendar .days li{
+    z-index: 1;
     cursor: pointer;
     margin-top: 30px;
 }
 
 .calendar ul li{
+    position: relative;
     width: calc(100% / 7);
+}
+
+.days li.inactive{
+    color: #aaa;
 }
