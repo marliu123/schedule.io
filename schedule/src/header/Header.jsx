@@ -3,10 +3,10 @@ import './header.css';
 
 
 
-const Header = () => {
+const Header = () => { 
     return(
         <div className='planner__title'>
-            Schedule.io
+            Schedule
         </div>
     );
 }
