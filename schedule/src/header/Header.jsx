@@ -6,7 +6,7 @@ import './header.css';
 const Header = () => { 
     return(
         <div className='planner__title'>
-            Schedule
+            Schedule.io
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './planner.css';
-import Weeks from './Weeks'
+import Weeks from './Weeks';
+import Event from './Event';
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 const Planner = () => {
@@ -16,7 +17,7 @@ const Planner = () => {
         let lastDayLastMonth = new Date(currYear, currMonth, 0).getDate();
         let liTag = [];
         for(let i = firstDay; i > 0; i--){
-            liTag.push(<li key = {i + "in"} className ='inactive'>${lastDayLastMonth - i + 1}</li>);
+            liTag.push(<li key = {i + "in"} className ='inactive'>{lastDayLastMonth - i + 1}</li>);
         }
 
         for(let i = 1; i <= lastDay; i++){
@@ -36,7 +37,6 @@ const Planner = () => {
     };
 
     const decrementer = () =>{
-        console.log(currMonth);
         setCurrMonth(currMonth - 1);
         if(currMonth < 1){
             setCurrYear(currYear - 1);
@@ -45,22 +45,25 @@ const Planner = () => {
     };
 
     return(
-        <div className='body'>
-            <div className='wrapper'>
-                <header>
-                    <p className = 'current-date'>{months[currMonth]} {currYear}</p>
-                    <div className='icons'>
-                        <span onClick = {decrementer}>< HiChevronLeft /></span>
-                        <span onClick = {incrementer}>< HiChevronRight /></span>
+        <div className='task-wrapper'>
+            <div className='body'>
+                <div className='wrapper'>
+                    <header>
+                        <p className = 'current-date'>{months[currMonth]} {currYear}</p>
+                        <div className='icons'>
+                            <span onClick = {decrementer}>< HiChevronLeft /></span>
+                            <span onClick = {incrementer}>< HiChevronRight /></span>
+                        </div>
+                    </header>
+                    <div className='calendar'>
+                        <Weeks />
+                        <ul className='days'> 
+                        {currDate()}
+                        </ul>
                     </div>
-                </header>
-                <div className='calendar'>
-                    <Weeks />
-                    <ul className='days'> 
-                    {currDate()}
-                    </ul>
                 </div>
             </div>
+            <Event />
         </div>
     );
 }
