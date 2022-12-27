@@ -27,14 +27,14 @@
 }
 
 header .current-date{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
 header .icons span{
     height: 38px;
     width: 38px;
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     margin: 0 3px;
     cursor: pointer;
     text-align: center;
@@ -51,7 +51,7 @@ header .icons span:last-child{
 }
 
 .calendar ul{
-    font-size: 28px;
+    font-size: 30px;
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -91,3 +91,6 @@ li.active{
     font-weight: bolder;
 }
 
+.icons :hover{
+    font-size: 45px;
+}
