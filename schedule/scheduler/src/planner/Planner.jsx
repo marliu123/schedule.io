@@ -4,6 +4,8 @@ import Weeks from './Weeks';
 import Event from './Event';
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
+let dateMap = new Map();
+
 const Planner = () => {
     let date = new Date();
     const [currYear, setCurrYear] = useState(date.getFullYear());
@@ -22,7 +24,9 @@ const Planner = () => {
 
         for(let i = 1; i <= lastDay; i++){
             let today = i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? "active" : "";
-            liTag.push(<li key = {i} className ={today}>{i}</li>);
+            liTag.push(<li key = {currMonth + "/" + i + "/" + currYear} className ={today}>{i}</li>);
+            dateMap.set(currMonth + "/" + i + "/" + currYear, []);
+
         }
         return( liTag.map(liTag =>(liTag)));
     }
