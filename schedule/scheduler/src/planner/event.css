@@ -69,7 +69,6 @@
     width: 100%;
     height: 100%;
     top: 0px;
-    background-color: rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,16 +81,55 @@ h3{
     height: 750px;
     max-width: 640px;
     background-color: #fff;
+    border-radius: 20px;
 }
 
 .close-btn{
     z-index: 1;
-    position: absolute;
-    top: 14%;
-    right: 27%;
+    position: relative;
+    top: 50px;
+    bottom: -10%;
+    right: -45%;
     font-size: 30px;
 }
 
 .close-btn :hover{
-    font-size: 38px;
+    font-weight: 100px;
 }
+
+@keyframes anvil {
+    0% {
+      transform: scale(0) translateY(0px);
+      opacity: 0;
+      box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    20% {
+      transform: scale(.2) translateY(0px);
+      opacity: .2;
+      box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    40% {
+        transform: scale(.4) translateY(0px);
+        opacity: .4;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    60%{
+        transform: scale(.6) translateY(0px);
+        opacity: .6;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+      }
+    60%{
+        transform: scale(.8) translateY(0px);
+        opacity: .8;
+        box-shadow: 0 0 0 rgba(241, 241, 241, 0);
+    }
+    100% {
+      transform: scale(1) translateY(0px);
+      opacity: 1;
+      box-shadow: 0 0 500px rgba(241, 241, 241, 0);
+    }
+  }
+  .popup {
+    -webkit-animation: anvil 0.5s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+} 
+

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@date-io/date-fns": "^2.16.0",
+    "date-fns": "^2.29.3",
+    "multiselect-react-dropdown": "^2.0.25",
+    "react-datetime-picker": "^4.1.1",
+    "react-time-picker": "^5.1.0"
+  }
+}
